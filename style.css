@@ -306,10 +306,15 @@ button {
 .envelope__back {
   position: absolute;
   inset: 0;
-  background: linear-gradient(155deg, var(--c-midnight-light), var(--c-midnight));
-  border: 1px solid rgba(212, 175, 55, 0.45);
+  /* Couleur plus contrastée et plus opaque que le fond de page, pour que
+     l'enveloppe ne se fonde plus dedans (elle paraissait "transparente"). */
+  background: linear-gradient(155deg, #2a3870 0%, #131c45 55%, #070a1c 100%);
+  border: 1.5px solid rgba(212, 175, 55, 0.75);
   border-radius: 8px;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55);
+  box-shadow:
+    0 25px 55px rgba(0, 0, 0, 0.65),
+    0 0 0 1px rgba(0, 0, 0, 0.4),
+    0 0 35px rgba(212, 175, 55, 0.12);
   z-index: 1;
 }
 
@@ -376,6 +381,9 @@ button {
 /* État "ouvert" : le rabat se rabat vers l'arrière, le sceau disparaît, la lettre remonte */
 .envelope.is-open .envelope__flap {
   transform: rotateX(-150deg);
+  /* Le rabat passe derrière une fois replié, sinon il restait visuellement
+     au-dessus de la lettre qui doit pourtant apparaître devant lui. */
+  z-index: 1;
 }
 
 .envelope.is-open .envelope__seal {
@@ -385,6 +393,8 @@ button {
 
 .envelope.is-open .envelope__letter {
   transform: translateY(-38%);
+  /* La lettre doit désormais être au premier plan, devant le rabat ouvert. */
+  z-index: 4;
 }
 
 .envelope.is-open .envelope__letter-hint {
