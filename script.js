@@ -18,12 +18,12 @@ const DATE_DU_BAL = new Date('2026-07-03T19:30:00');
 const PHRASES_BOUTON_NON = [
   'Non',
   'Tu es sûre ?',
-  'Vraiment ?',
-  'Réfléchis bien...',
-  'Essaie encore !',
-  'Dernière chance...',
-  'Allez, dis Oui ☺',
-  "Bon d'accord, j'arrête"
+  'Pourquoi ?',
+  "Tu m'aimes plus...",
+  "Tu préféres Juliette c'es ça ?",
+  "Bon d'accors, j'arrête...",
+  'Ou pas !',
+  "Mais pourquoi tu t'obstine ? 😔"
 ];
 
 /* ==========================================================================
