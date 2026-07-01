@@ -23,7 +23,7 @@ const PHRASES_BOUTON_NON = [
   "Tu préféres Juliette c'es ça ?",
   "Bon d'accors, j'arrête...",
   'Ou pas !',
-  "Mais pourquoi tu t'obstine ? 😔"
+  "Mais pourquoi tu t'obstine ? 😭"
 ];
 
 /* ==========================================================================
